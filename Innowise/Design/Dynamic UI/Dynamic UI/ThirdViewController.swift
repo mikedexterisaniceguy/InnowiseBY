@@ -11,20 +11,20 @@ class ThirdViewController: UIViewController {
 
     // 1 view 2 buttons
     
-    private let hideButton: UIButton = {
+    private let removeAlphaButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .blue
-        button.setTitle("Hide", for: .normal)
+        button.setTitle("Remove alpha", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    private let showButton: UIButton = {
+    private let addAlphaButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .green
-        button.setTitle("Show", for: .normal)
+        button.setTitle("Add alpha", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -38,30 +38,48 @@ class ThirdViewController: UIViewController {
         return view
     }()
     
+    private let cityImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Гродно")
+        imageView.contentMode = .scaleAspectFit
+        imageView.isHidden = false
+        imageView.alpha = 1
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     private let buttonsStackView = UIStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        self.title = "First VC"
+        self.title = "Third VC"
         
         setUpViews()
         setUpContsraints()
   
     }
     
+//MARK: Set up views
+    
     private func setUpViews() {
         view.addSubview(buttonsStackView)
         view.addSubview(itemView)
+        itemView.addSubview(cityImageView)
         
         createButtonsStackView()
         
+        addAlphaButton.addTarget(self, action: #selector(addAlpha), for: .touchUpInside)
+        removeAlphaButton.addTarget(self, action: #selector(removeAlpha), for: .touchUpInside)
+        
     }
     
+//MARK: Create stackView
+    
     private func createButtonsStackView() {
-        buttonsStackView.addArrangedSubview(showButton)
-        buttonsStackView.addArrangedSubview(hideButton)
+        buttonsStackView.addArrangedSubview(addAlphaButton)
+        buttonsStackView.addArrangedSubview(removeAlphaButton)
         buttonsStackView.axis = .horizontal
         buttonsStackView.distribution = .fillEqually
         buttonsStackView.alignment = .trailing
@@ -69,8 +87,23 @@ class ThirdViewController: UIViewController {
         buttonsStackView.translatesAutoresizingMaskIntoConstraints = false
     }
     
+//MARK: Adding actions to buttons
+    
+    @objc private func addAlpha() {
+        if cityImageView.alpha != 1 {
+            cityImageView.alpha += 0.1
+        } else { return }
+    }
+    
+    @objc private func removeAlpha() {
+        if cityImageView.alpha != 0 {
+            cityImageView.alpha -= 0.1
+        } else { return }
+    }
 
 }
+
+//MARK: - Set up constraints
 
 extension ThirdViewController {
     private func setUpContsraints() {
@@ -82,8 +115,15 @@ extension ThirdViewController {
         ])
         
         NSLayoutConstraint.activate([
-            hideButton.heightAnchor.constraint(equalToConstant: 60),
-            showButton.heightAnchor.constraint(equalToConstant: 60)
+            cityImageView.leadingAnchor.constraint(equalTo: itemView.leadingAnchor),
+            cityImageView.topAnchor.constraint(equalTo: itemView.topAnchor),
+            cityImageView.trailingAnchor.constraint(equalTo: itemView.trailingAnchor),
+            cityImageView.bottomAnchor.constraint(equalTo: itemView.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            addAlphaButton.heightAnchor.constraint(equalToConstant: 60),
+            removeAlphaButton.heightAnchor.constraint(equalToConstant: 60)
         ])
         
         NSLayoutConstraint.activate([
