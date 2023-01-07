@@ -46,14 +46,39 @@ class MainViewController: UIViewController {
         
         setUpViews()
         setUpContsraints()
+        
+        firstVCButton.addTarget(self, action: #selector(goToFirstVC), for: .touchUpInside)
+        secondVCButton.addTarget(self, action: #selector(goToSecondVC), for: .touchUpInside)
+        thirdVCButton.addTarget(self, action: #selector(goToThirdtVC), for: .touchUpInside)
     }
+    
+//MARK: Set up views
     
     private func setUpViews() {
         view.addSubview(firstVCButton)
         view.addSubview(secondVCButton)
         view.addSubview(thirdVCButton)
     }
+    
+//MARK: Add push's
+    
+    @objc private func goToFirstVC() {
+        let firstVC = FirstViewController()
+        self.navigationController?.pushViewController(firstVC, animated: true)
+    }
+    
+    @objc private func goToSecondVC() {
+        let secondVC = SecondViewController()
+        self.navigationController?.pushViewController(secondVC, animated: true)
+    }
+    
+    @objc private func goToThirdtVC() {
+        let thirdVC = ThirdViewController()
+        self.navigationController?.pushViewController(thirdVC, animated: true)
+    }
 }
+
+//MARK: - Set up constraints
 
 extension MainViewController {
     private func setUpContsraints() {
