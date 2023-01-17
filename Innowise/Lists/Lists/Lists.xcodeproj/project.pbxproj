@@ -20,6 +20,7 @@
 		9DBBEB7A2975D2D10022E374 /* ViewControllerTable3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBEB792975D2D10022E374 /* ViewControllerTable3.swift */; };
 		9DBBEB7E2976B32A0022E374 /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBEB7D2976B32A0022E374 /* TableViewCell1.swift */; };
 		9DBBEB802976BD280022E374 /* Extension StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBEB7F2976BD280022E374 /* Extension StackView.swift */; };
+		9DBBEB822976C9140022E374 /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBEB812976C9140022E374 /* TableViewCell2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9DBBEB792975D2D10022E374 /* ViewControllerTable3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTable3.swift; sourceTree = "<group>"; };
 		9DBBEB7D2976B32A0022E374 /* TableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
 		9DBBEB7F2976BD280022E374 /* Extension StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension StackView.swift"; sourceTree = "<group>"; };
+		9DBBEB812976C9140022E374 /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				9DBBEB7D2976B32A0022E374 /* TableViewCell1.swift */,
+				9DBBEB812976C9140022E374 /* TableViewCell2.swift */,
 			);
 			path = "New Group1";
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DBBEB822976C9140022E374 /* TableViewCell2.swift in Sources */,
 				9DBBEB58297582770022E374 /* AppDelegate.swift in Sources */,
 				9DBBEB802976BD280022E374 /* Extension StackView.swift in Sources */,
 				9DBBEB762975D2750022E374 /* ViewControllerCollection1.swift in Sources */,
