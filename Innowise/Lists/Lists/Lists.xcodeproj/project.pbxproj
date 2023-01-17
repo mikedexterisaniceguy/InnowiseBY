@@ -18,6 +18,8 @@
 		9DBBEB762975D2750022E374 /* ViewControllerCollection1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBEB752975D2750022E374 /* ViewControllerCollection1.swift */; };
 		9DBBEB782975D2800022E374 /* ViewControllerCollection2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBEB772975D2800022E374 /* ViewControllerCollection2.swift */; };
 		9DBBEB7A2975D2D10022E374 /* ViewControllerTable3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBEB792975D2D10022E374 /* ViewControllerTable3.swift */; };
+		9DBBEB7E2976B32A0022E374 /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBEB7D2976B32A0022E374 /* TableViewCell1.swift */; };
+		9DBBEB802976BD280022E374 /* Extension StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBEB7F2976BD280022E374 /* Extension StackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		9DBBEB752975D2750022E374 /* ViewControllerCollection1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCollection1.swift; sourceTree = "<group>"; };
 		9DBBEB772975D2800022E374 /* ViewControllerCollection2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCollection2.swift; sourceTree = "<group>"; };
 		9DBBEB792975D2D10022E374 /* ViewControllerTable3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTable3.swift; sourceTree = "<group>"; };
+		9DBBEB7D2976B32A0022E374 /* TableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
+		9DBBEB7F2976BD280022E374 /* Extension StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension StackView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +72,10 @@
 			children = (
 				9DBBEB57297582770022E374 /* AppDelegate.swift */,
 				9DBBEB59297582770022E374 /* SceneDelegate.swift */,
+				9DBBEB7B2976B2F30022E374 /* New Group1 */,
 				9DBBEB702975D1920022E374 /* New Group */,
 				9DBBEB6B297583530022E374 /* UserModel.swift */,
+				9DBBEB7F2976BD280022E374 /* Extension StackView.swift */,
 				9DBBEB60297582780022E374 /* Assets.xcassets */,
 				9DBBEB62297582780022E374 /* LaunchScreen.storyboard */,
 				9DBBEB65297582780022E374 /* Info.plist */,
@@ -88,6 +94,14 @@
 				9DBBEB792975D2D10022E374 /* ViewControllerTable3.swift */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		9DBBEB7B2976B2F30022E374 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+				9DBBEB7D2976B32A0022E374 /* TableViewCell1.swift */,
+			);
+			path = "New Group1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,10 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DBBEB58297582770022E374 /* AppDelegate.swift in Sources */,
+				9DBBEB802976BD280022E374 /* Extension StackView.swift in Sources */,
 				9DBBEB762975D2750022E374 /* ViewControllerCollection1.swift in Sources */,
 				9DBBEB6F2975D15F0022E374 /* TabBarController.swift in Sources */,
 				9DBBEB742975D2510022E374 /* ViewControllerTable2.swift in Sources */,
 				9DBBEB7A2975D2D10022E374 /* ViewControllerTable3.swift in Sources */,
+				9DBBEB7E2976B32A0022E374 /* TableViewCell1.swift in Sources */,
 				9DBBEB722975D2340022E374 /* ViewControllerTable.swift in Sources */,
 				9DBBEB6C297583530022E374 /* UserModel.swift in Sources */,
 				9DBBEB5A297582770022E374 /* SceneDelegate.swift in Sources */,

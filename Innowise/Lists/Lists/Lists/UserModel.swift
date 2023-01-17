@@ -21,7 +21,7 @@ struct User {
     var firstName: String
     var lastName: String
     var age: Int
-    var sex: String
+    var sex: UIImage
     var avatar: UIImage
     var dexcription: String
 }
@@ -29,32 +29,32 @@ struct User {
 // User Generator
 
 struct UserGenerator {
-    var users: [User]
+    var users = [User]()
     
     mutating func setUser() {
         for _ in 1...30 {
             
-            var user: User?
+            var user = User(firstName: "1", lastName: "1", age: 12, sex: UIImage(named: "queen")!, avatar: UIImage(named: "king")!, dexcription: "2")
                 let names = ["Alex", "John", "Randy", "Kyle", "Bilbo", "Sarah", "Lena", "Tanya"]
-                user?.firstName = names.randomElement()!
+                user.firstName = names.randomElement()!
                 
                 let fornames = ["Buchetti", "Lacetti", "Milos", "Rodriguez", "Sholz", "Bulloc", "Medvedkovic", "Irocco"]
-                user?.lastName = fornames.randomElement()!
+                user.lastName = fornames.randomElement()!
                 
                 let age = 18...60
-                user?.age = age.randomElement()!
-                let sex = ["Man", "Woman"]
+                user.age = age.randomElement()!
+            
+                let sex = [UIImage(named: "king"), UIImage(named: "queen")]
+                user.sex = sex.randomElement()!!
                 
-                user?.sex = sex.randomElement()!
-                
-                user?.avatar = UIImage(named: "Elon")!
+                user.avatar = UIImage(named: "Elon")!
                 let description = ["My wolf is in the zoo",
                 "Jesus Lord please help us and save us",
                 "Why do the people are so good? Maybe its because i'm too good?",
                 "I know more than 5 thousand english words. And i'm still thinking that its not enough to communicate with native speakers fluently and correctly"]
-                user?.dexcription = description.randomElement()!
+                user.dexcription = description.randomElement()!
             
-            users.append(user!)
+            users.append(user)
         }
     }
 }
